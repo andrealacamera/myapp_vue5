@@ -12,6 +12,12 @@ module.exports = {
     ]
   },
   theme: {
+    opacity: {
+      '20': '0.2',
+      '50': '0.5',
+      '80': '0.8',
+      '90': '0.9',
+    },
     extend: {},
   },
   variants: {},
