@@ -17,7 +17,7 @@
             </div>
             <div class="flex flex-col items-center my-4 ">
               <button class="w-1/2 p-2 rounded bg-gradient-to-b from-blue-500 to-blue-900 text-gray-200 hover:text-white" type="submit" :class="[{'cursor-not-allowed' : nosubmit}, {'opacity-50': nosubmit}]" :disabled="nosubmit||loading">
-              <span v-if="loading" class="animate-spin h-4 w-4">Logging...</span>
+              <span v-if="loading" class="animate-spin h-4 w-4">Loading...</span>
               <span v-else >Login</span>
               </button>
               <div v-if="message.length>0" class="bg-red-300 text-red-900 text-xs rounded my-4 p-2 w-2/3">
@@ -46,19 +46,16 @@ export default {
   },
   computed: {
     nosubmit() {
-      console.log(this.email.length, this.password.length, (this.email.length==0) || (this.password.length==0));
       return (this.email.length==0) || (this.password.length==0);
     }
   },
   methods: {
     submit() {
       this.loading= true;
-      console.log("submit!");
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-      .then( (res) => {
+      .then( () => {
         this.email='';
         this.password='';
-        console.log(res);
         this.loading=false;
         this.$emit('close-login');
       })

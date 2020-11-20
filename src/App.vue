@@ -20,9 +20,6 @@ export default {
       userAuth: {}
     }
   },
-  updated() {
-    console.log("app update --> ", this.isLogged);
-  },
   mounted() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {

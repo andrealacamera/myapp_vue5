@@ -7,5 +7,7 @@
   "about_text1": "This is the About Us page",
   "gallery_menu": "Gallery",
   "gallery_title": "Photo Gallery",
-  "read_more": "Read more"
+  "read_more": "Read more",
+  "profile_menu": "Profile",
+  "profile_title": "My profile"
 }
