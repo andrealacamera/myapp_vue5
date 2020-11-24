@@ -3,6 +3,7 @@ import Home from '../views/Home'
 import About from '../views/About'
 import Gallery from '../views/Gallery'
 import Profile from '../views/Profile'
+import Calculator from '../views/Calculator'
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/profile',
     component: Profile,
+  },
+  {
+    path: '/calculator',
+    component: Calculator,
   }  
 ];
 
