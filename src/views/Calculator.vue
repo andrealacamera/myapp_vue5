@@ -38,7 +38,8 @@
 
 <script>
 import { useI18n } from 'vue-i18n';
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { ref, computed } from 'vue';
+import useWindowEvent from '@/utilities/onWindowEvent'
 
 export default {
   name: "Calculator",
@@ -161,9 +162,8 @@ export default {
 
     //  add / remove listener for keyboard input
     const handleKeydown = (e) => press (e.key);
-    onMounted( () => window.addEventListener('keydown', handleKeydown) )
-    onUnmounted( () => window.removeEventListener('keydown', handleKeydown) ) 
-
+    useWindowEvent('keydown', handleKeydown)
+    
     return { t, locale, result, prev, oper, curr, press, par, pprev, poper, pcurr }
   }
 }
