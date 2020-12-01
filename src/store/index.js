@@ -1,10 +1,11 @@
 import  { createStore } from 'vuex'
+import login from './modules/login'
+import menu from './modules/menu'
 
 const store = createStore({
-  store() {
-    return  {
-      a: 123
-    }
+  modules: {
+    login,
+    menu
   }
 })
 

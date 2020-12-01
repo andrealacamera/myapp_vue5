@@ -22,30 +22,20 @@
 
 <script>
 import {useI18n} from 'vue-i18n';
-import firebase from '@/utilities/firebase'
+// import firebase from '@/utilities/firebase'
+import {mapState} from 'vuex'
 
 export default {
   name: "Profile",
-  data() {
-    return {
-      user:{},
-    }
-  },
+
   setup() {
     return useI18n()
   },
-  created() {
-    this.user=firebase.auth().currentUser;
-    console.log(this.user);
+  computed: {
+    ...mapState({
+    user: state => state.login.userAuth
+    }),
   },
-  beforeRouteEnter(to,from, next) {
-    var u = firebase.auth().currentUser;
-    if (!u) {
-      next({path: '/'})
-    } else {
-      next()
-    }
-  }
 }
 </script>
 

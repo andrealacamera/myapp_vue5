@@ -5,12 +5,11 @@ This app contains:
 - [Vue Router 3](https://next.router.vuejs.org/)
 - [Vuex 4](https://next.vuex.vuejs.org/)
 - [Tailwindcss](https://tailwindcss.com/)
+- Images from [Pixabay](https://pixabay.com)
+- Login system by [Google Firebase] (https://console.firebase.google.com/)
 
+Based on [this video tutorial] (https://youtu.be/e-E0UB-YDRk) 
 
-Images from [Pixabay](https://pixabay.com)
-Login by [Google Firebase] (https://console.firebase.google.com/)
-
-based on [this video tutorial] (https://youtu.be/e-E0UB-YDRk) 
 ## Project setup
 ```
 npm install
@@ -26,10 +25,4 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Last update: 2020-11-26

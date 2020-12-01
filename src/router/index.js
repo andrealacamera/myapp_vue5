@@ -5,6 +5,8 @@ import Gallery from '../views/Gallery'
 import Profile from '../views/Profile'
 import Calculator from '../views/Calculator'
 
+import store  from '../store/'
+
 const routes = [
   {
     path: '/', 
@@ -33,6 +35,12 @@ const router = createRouter({
   history: createWebHashHistory(), //history implementation
   routes, // short for routes:routes
 });
+
+router.beforeEach( (to, from, next) => {
+  const user = store.state.login.userAuth;
+  if (!user && to.path==='/profile') next({path: '/'})
+  else next()
+})
 
 
 export default router;

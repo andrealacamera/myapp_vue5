@@ -1,5 +1,5 @@
 <template>
-  <div class="z-10 fixed top-0 bg-indigo-200 bg-opacity-50 w-screen h-screen" @click="$emit('close-login')">
+  <div class="z-10 fixed top-0 bg-indigo-200 bg-opacity-50 w-screen h-screen" @click="closeAll">
   </div>
   <div class="absolute inset-0">
     <div class="flex h-full">
@@ -33,9 +33,10 @@
 
 <script>
 import firebase from '@/utilities/firebase'
+import { mapActions } from 'vuex';
+
 export default {
   name: "Login",
-  emits: ["close-login"],
   data(){
     return {
       email: "info@teiga.it",
@@ -50,6 +51,8 @@ export default {
     }
   },
   methods: {
+    ...mapActions('login', ['toggleLogin']),
+    ...mapActions('menu', ['toggleMenu']),
     submit() {
       this.loading= true;
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
@@ -57,14 +60,17 @@ export default {
         this.email='';
         this.password='';
         this.loading=false;
-        this.$emit('close-login');
+        this.closeAll();
       })
       .catch( (error) => {
         this.loading=false;
         this.message= error.message;
         console.log(error);
-      });
-    
+      });    
+    },
+    closeAll() {
+      this.toggleLogin();
+      this.toggleMenu();
     }
   }
 }
