@@ -27,7 +27,7 @@ export default {
         this.setIsLogged(false);
         this.setUser(null);
       }
-    })
+    });    
   }
 }
 </script>

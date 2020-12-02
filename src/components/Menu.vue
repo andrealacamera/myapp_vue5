@@ -45,8 +45,7 @@ export default {
     logout() {
       firebase.auth().signOut()
       .then( () => {
-        console.log("Log out");
-        this.toggleMenu;
+        this.toggleMenu();
         this.$router.push('/'); //go to home!
 
       })

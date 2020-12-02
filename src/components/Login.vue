@@ -9,11 +9,11 @@
           <form class="p-2 mx-2 mb-2" @submit.prevent="submit">
             <div class="my-4">
               <label class="text-base">Email</label>
-              <input type="text" class="w-full rounded p-2 border shadow" v-model="email" />
+              <input type="text" class="w-full rounded p-2 border shadow" v-model="email" autocomplete="email"/>
             </div>
             <div class="my-4">
               <label class="text-base">Password</label>
-              <input type="password" class="w-full rounded p-2 border shadow" v-model="password" />
+              <input type="password" class="w-full rounded p-2 border shadow" v-model="password" autocomplete="current-password"/>
             </div>
             <div class="flex flex-col items-center my-4 ">
               <button class="w-1/2 p-2 rounded bg-gradient-to-b from-blue-500 to-blue-900 text-gray-200 hover:text-white" type="submit" :class="[{'cursor-not-allowed' : nosubmit}, {'opacity-50': nosubmit}]" :disabled="nosubmit||loading">
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     ...mapActions('login', ['toggleLogin']),
-    ...mapActions('menu', ['toggleMenu']),
+    ...mapActions('menu', ['toggleMenu', 'closeMenu']),
     submit() {
       this.loading= true;
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
@@ -70,7 +70,7 @@ export default {
     },
     closeAll() {
       this.toggleLogin();
-      this.toggleMenu();
+      this.closeMenu();
     }
   }
 }

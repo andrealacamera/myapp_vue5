@@ -1,5 +1,3 @@
-
-
 const state = () => ({
   isLogged: false,
   userAuth: null,

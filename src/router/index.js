@@ -23,6 +23,7 @@ const routes = [
   {
     path: '/profile',
     component: Profile,
+    meta: {middleware : "auth" }
   },
   {
     path: '/calculator',
@@ -36,11 +37,22 @@ const router = createRouter({
   routes, // short for routes:routes
 });
 
-router.beforeEach( (to, from, next) => {
-  const user = store.state.login.userAuth;
-  if (!user && to.path==='/profile') next({path: '/'})
-  else next()
-})
 
+//metodo diretto 
+// router.beforeEach( (to, from, next) => {
+//   const user = store.state.login.userAuth;
+//   if (!user && to.path==='/profile') next({path: '/'})
+//   else next()
+// })
+
+//metodo con middleware
+router.beforeEach( (to,from,next) => {
+  if (to.meta.middleware) {
+    const middleware = require(`./middleware/${to.meta.middleware}`);
+    middleware.default(next, store);
+  } else {
+    next();
+  }
+});
 
 export default router;
