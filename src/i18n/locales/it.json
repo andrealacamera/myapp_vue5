@@ -13,6 +13,13 @@
   "profile_title": "Il mio profilo",
   "profile_text1": "Questa è la pagina Profilo",
   "calculator_menu": "Calcolatrice",
-  "calculator_title": "Calcolatrice"
+  "calculator_title": "Calcolatrice",
+  "detect_title": "Riconoscimento oggetti con Tensorflow",
+  "detect_menu": "Riconoscimento oggetti",
+  "detect_img": "Esempi",
+  "detect_button": "Vai!",
+  "detect_result": "Risultato",
+  "detect_score" : "Punteggio"
+
 
 }

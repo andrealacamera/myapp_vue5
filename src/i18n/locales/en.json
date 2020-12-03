@@ -12,5 +12,11 @@
   "profile_title": "My profile",
   "profile_text1": "This is the Profile page",
   "calculator_menu": "Calculator",
-  "calculator_title": "Calculator"
+  "calculator_title": "Calculator",
+  "detect_title": "Tensorflow Object Detection",
+  "detect_menu": "Object Detection",
+  "detect_img": "Examples",
+  "detect_button": "Go!",
+  "detect_result": "Result",
+  "detect_score" : "Score"
 }

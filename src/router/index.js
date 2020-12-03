@@ -4,6 +4,7 @@ import About from '../views/About'
 import Gallery from '../views/Gallery'
 import Profile from '../views/Profile'
 import Calculator from '../views/Calculator'
+import Tensorflow from '../views/Tensorflow'
 
 import store  from '../store/'
 
@@ -28,7 +29,11 @@ const routes = [
   {
     path: '/calculator',
     component: Calculator,
-  }  
+  },
+  {
+    path: '/detect',
+    component: Tensorflow,
+  }    
 ];
 
 const router = createRouter({
@@ -37,15 +42,7 @@ const router = createRouter({
   routes, // short for routes:routes
 });
 
-
-//metodo diretto 
-// router.beforeEach( (to, from, next) => {
-//   const user = store.state.login.userAuth;
-//   if (!user && to.path==='/profile') next({path: '/'})
-//   else next()
-// })
-
-//metodo con middleware
+// custom middleware 
 router.beforeEach( (to,from,next) => {
   if (to.meta.middleware) {
     const middleware = require(`./middleware/${to.meta.middleware}`);
@@ -54,5 +51,13 @@ router.beforeEach( (to,from,next) => {
     next();
   }
 });
+
+//metodo diretto 
+// router.beforeEach( (to, from, next) => {
+//   const user = store.state.login.userAuth;
+//   if (!user && to.path==='/profile') next({path: '/'})
+//   else next()
+// })
+
 
 export default router;

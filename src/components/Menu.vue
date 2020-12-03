@@ -7,6 +7,7 @@
           <router-link @click="toggleMenu" class="hover:text-white" to="/about">{{t('about_menu')}}</router-link>
           <router-link @click="toggleMenu" class="hover:text-white" to="/gallery">{{t('gallery_menu')}}</router-link>
           <router-link @click="toggleMenu" class="hover:text-white" to="/calculator">{{t('calculator_menu')}}</router-link>
+          <router-link @click="toggleMenu" class="hover:text-white" to="/detect">{{t('detect_menu')}}</router-link>
           <router-link v-if="isLogged" @click="toggleMenu" class="hover:text-white" to="/profile">{{t('profile_menu')}}</router-link>
           <span v-if="isLogged" @click="logout" class="cursor-pointer hover:text-white">Logout</span>
           <span v-else @click="toggleLogin" class="cursor-pointer hover:text-white">Login</span>

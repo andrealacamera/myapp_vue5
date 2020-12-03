@@ -7,6 +7,7 @@ This app contains:
 - [Tailwindcss](https://tailwindcss.com/)
 - Images from [Pixabay](https://pixabay.com)
 - Login system by [Google Firebase] (https://console.firebase.google.com/)
+- Detect Object by [TensowFlow] (https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd)
 
 Based on [this video tutorial] (https://youtu.be/e-E0UB-YDRk) 
 
