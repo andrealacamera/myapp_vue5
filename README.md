@@ -4,7 +4,7 @@ This app contains:
 - [vue-i18n-next](https://github.com/intlify/vue-i18n-next)
 - [Vue Router 4](https://next.router.vuejs.org/)
 - [Vuex 4](https://next.vuex.vuejs.org/)
-- [Tailwindcss](https://tailwindcss.com/)
+- [Tailwindcss 1.9.6](https://tailwindcss.com/)
 - Images from [Pixabay](https://pixabay.com)
 - Login system by [Google Firebase] (https://console.firebase.google.com/)
 - Detect Object by [TensowFlow] (https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd). Some issues with cameras without https (?)
