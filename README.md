@@ -6,10 +6,10 @@ This app contains:
 - [Vuex 4](https://next.vuex.vuejs.org/)
 - [Tailwindcss 1.9.6](https://tailwindcss.com/)
 - Images from [Pixabay](https://pixabay.com)
-- Login system by [Google Firebase] (https://console.firebase.google.com/)
-- Detect Object by [TensowFlow] (https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd). Some issues with cameras without https (?)
+- Login system by [Google Firebase](https://console.firebase.google.com/)
+- Detect Object by [TensorFlow](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd). Some issues with cameras without https (?)
 
-Based on [this video tutorial] (https://youtu.be/e-E0UB-YDRk) 
+Based on [this video tutorial](https://youtu.be/e-E0UB-YDRk) 
 
 ## Project setup
 ```
